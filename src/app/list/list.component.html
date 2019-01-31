@@ -1,0 +1,7 @@
+<ul class="list-group">
+  <li class="list-group-item d-flex justify-content-between align-items-center" *ngFor="let post of posts | async">
+    <span class="badge badge-primary badge-pill text-left">{{post.votes}}</span>
+    {{post.title}} by {{post.author.firstName}} {{post.author.lastName}}
+    <app-upvote [postId]="post.id"></app-upvote>
+  </li>
+</ul>
